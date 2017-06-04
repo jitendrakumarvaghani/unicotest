@@ -1,0 +1,22 @@
+<div class="c-item">
+    <div class="c-item__image">
+        <img [src]="item.imageUrl" />
+    </div>
+    <div class="c-item__title">
+        {{item.title}}
+    </div>
+    <div>
+        {{item.category}}
+    </div>
+    <div class="text-right">
+      <div class="c-item__price dollar-prefix">{{item.unitCost}}</div>
+      <div class="c-item__subtext">per unit</div>
+    </div>
+    <div>
+    <div class="c-item__subtext">
+      {{item.unitsInCartons}} units per carton
+    </div>
+    <div class="c-item__subtext dollar-prefix dollar-prefix--inline">
+        ({{item.unitsInCartons * item.unitCost | number : '1.2-2' }})
+    </div>
+</div>

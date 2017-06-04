@@ -1,0 +1,20 @@
+<div class="nav-wrapper">
+  <div class="container">
+    <nav class="c-nav">
+        <div class="c-nav__item padding-right-10">
+            <span class="c-nav__text">Total Products</span>
+            <h3 class="c-nav__number">{{totalProducts}}</h3>
+        </div>
+        <div class="c-nav__item border-left-white padding-left-10">
+            <span class="c-nav__text">Total Cost</span>
+            <h3 class="c-nav__number dollar-prefix">{{totalCost | number : '1.2-2' }}</h3>
+        </div>
+    </nav>
+  </div>
+</div>
+<div class="container">
+  <div class="c-sub-nav text-right">
+      <a class="c-sub-nav__link c-sub-nav__link--is-home" routerLinkActive="c-sub-nav__link--is-active" routerLink="home"></a>
+      <a class="c-sub-nav__link c-sub-nav__link--is-cart" routerLinkActive="c-sub-nav__link--is-active" routerLink="cart"></a>
+  </div>
+</div>

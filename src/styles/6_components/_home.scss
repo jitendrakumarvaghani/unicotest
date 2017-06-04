@@ -1,0 +1,72 @@
+.c-product {
+  background-color: $white;
+  border-radius: 3px;
+  display: inline-block;
+  margin-right: 30px;
+  padding: 10px;
+  position: relative;
+  vertical-align: top;
+
+  &__btn {
+    position: absolute;
+    right: 21px;
+    top: -21px;
+  }
+
+  &_footerheight {
+    min-height: 82px;
+  }
+
+  &__footer {
+    background: lighten($primary, 60%);
+    display: flex;
+    padding: 10px;
+    text-transform: uppercase;
+
+    h3 {
+      color: $primary;
+      font-weight: 700;
+    }
+
+    small {
+      font-size: 12px;
+      padding-left: 7px;
+    }
+  }
+
+  &__suggestion,
+  &__recommendation {
+    display: inline-block;
+    flex: 1;
+    text-align: center;
+  }
+}
+
+
+.c-item {
+  display: inline-block;
+  padding: 10px;
+
+  &__image {
+    height: 100%;
+    width: 100%;
+  }
+
+  &__title {
+    text-transform: uppercase;
+  }
+
+  &__price {
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+
+  &__subtext {
+    color: $light-gray;
+    font-size: .8rem;
+  }
+
+  &__units-per-carton {
+    font-size: .8rem;
+  }
+}

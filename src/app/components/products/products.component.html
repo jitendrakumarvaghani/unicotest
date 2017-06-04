@@ -1,0 +1,23 @@
+<div class="card c-product" *ngFor="let product of productsService.products | async">
+    <div href="#" class="btn btn-default btn-circle btn-primary c-product__btn" (click)="addToCart(product.items)">
+      <span class="icon-center">+</span>
+    </div>
+    <app-item *ngFor="let item of product.items" [item]="item"></app-item>
+    <div class="c-product_footerheight">
+      <div class="c-product__footer" *ngIf="product.items.length > 1">
+        <div class="c-product__suggestion">
+          <h3>
+            {{ product.items.length }}<small>items</small>
+          </h3>
+          <div class="asterisk-postfix">
+            selss well together
+          </div>
+        </div>
+        <div class="c-product__recommendation">
+          <h3 class="percentage-postfix">{{ product.recommendation.currentLevel * 100 / product.recommendation.maxLevel }}</h3>
+          <div class="asterisk-postfix">Recommended</div>
+        </div>
+      </div>
+    </div>
+
+</div>

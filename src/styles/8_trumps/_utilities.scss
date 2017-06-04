@@ -1,0 +1,34 @@
+.border-left-white {
+  border-left: 1px solid $white;
+}
+
+.padding-left-10 {
+  padding-left: 10px;
+}
+
+.padding-right-10 {
+  padding-right: 10px;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.rotate-45 {
+  display: block;
+  transform: rotate(45deg);
+}
+
+.d-flex {
+  display: flex;
+}
+
+.icon-center {
+  top: -1px;
+  left: 1px;
+  position: relative;
+}
+
+.jc-right {
+  justify-content: flex-end;
+}

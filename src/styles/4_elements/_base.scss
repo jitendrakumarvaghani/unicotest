@@ -1,0 +1,58 @@
+body {
+  background: $bg-color;
+  font-family: $open-sans;
+}
+
+ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+.btn-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 42px;
+  height: 42px;
+  font-size: 2rem;
+  text-align: center;
+  line-height: 1.428571429;
+  border-radius: 21px;
+  color: $white;
+  cursor: pointer;
+}
+
+.dollar-prefix {
+  &::before {
+    content: '$';
+    display: inline-block;
+    font-size: .4rem;
+    left: 0;
+    padding-right: 3px;
+    position: relative;
+    top: -8px;
+  }
+  &--inline {
+    &::before {
+      font-size: inherit;
+      top: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+.percentage-postfix {
+  &::after {
+    content: '%';
+    display: inline-block;
+    right: 0;
+  }
+}
+
+.asterisk-postfix {
+  &::after {
+    content: '*';
+    display: inline-block;
+    right: 0;
+  }
+}

@@ -1,0 +1,4 @@
+:host app-item:nth-child(2n + 1) {
+  display: inline-block;
+  margin-left: 50px;
+}

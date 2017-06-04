@@ -1,0 +1,49 @@
+.nav-wrapper {
+  background: linear-gradient(45deg, $primary, $secondary);
+}
+
+.c-nav {
+  color: $white;
+  padding: 2rem 0;
+
+  &__item {
+    display: inline-block;
+    font-size: .4rem;
+    text-transform: uppercase;
+    vertical-align: top;
+  }
+
+  &__text {
+    font-weight: 700;
+  }
+
+  &__number {
+    font-size: 1.3rem;
+    position: relative;
+  }
+}
+
+.c-sub-nav {
+  padding: 2rem 0;
+
+  &__link {
+    background: url('../assets/images/home-view-icon.png');
+    background-repeat: no-repeat;
+    background-size: 80px auto;
+    display: inline-block;
+    height: 42px;
+    width: 42px;
+
+    &--is-home {
+      background-position: 0 -40px;
+    }
+
+    &--is-cart {
+      background-position: 0 0;
+    }
+
+    &--is-active {
+      background-position-x: -40px;
+    }
+  }
+}

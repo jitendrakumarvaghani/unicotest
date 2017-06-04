@@ -1,0 +1,27 @@
+<div *ngIf='(cartService.cartItems | async)?.length === 0'>
+  <div class="no-products-message container text-center">
+    {{ noProductsMessage}}
+  </div>
+</div>
+<div *ngFor="let cartItemGrp of cartService.cartItems | async">
+  <div class="container">
+    <div class="row">
+      <div class="col no-padding">
+        <div class="c-cart-category">{{cartItemGrp.category}} ({{cartItemGrp.products.length}})</div>
+      </div>
+    </div>
+  </div>
+   <div class="container">
+     <ul class="row c-cart-heading">
+         <li class="c-cart-heading__item col text-left">Image</li>
+         <li class="c-cart-heading__item col text-left">Name</li>
+         <li class="c-cart-heading__item col text-right">Unit COST</li>
+         <li class="c-cart-heading__item col text-right">PACK SIZE</li>
+         <li class="c-cart-heading__item col text-right">units in carton</li>
+         <li class="c-cart-heading__item col text-right">no.of cartons</li>
+         <li class="c-cart-heading__item col text-right">value</li>
+         <li class="c-cart-heading__item col text-right">actions</li>
+     </ul>
+   </div>
+   <app-cart-item-grp [products]="cartItemGrp.products"></app-cart-item-grp>
+</div>
